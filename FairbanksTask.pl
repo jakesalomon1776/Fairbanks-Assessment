@@ -61,12 +61,12 @@ for (my $lc = 1; $lc <= $item_count; $lc++)
 # This is mainly a debugging step: Sort all the combos in increasing order
 # of price total.
 #
-#-my @sorted_combos = sort {$combo_totals{$a} <=> $combo_totals{$b}}
-#-                          keys(%combo_totals);
-#-foreach my $one_combo (@sorted_combos)
-#-{
-#-  printf("%-55s => %6.2f\n", $one_combo, $combo_totals{$one_combo});
-#-}
+my @sorted_combos = sort {$combo_totals{$a} <=> $combo_totals{$b}}
+                          keys(%combo_totals);
+foreach my $one_combo (@sorted_combos)
+{
+  printf("%-88s => %6.2f\n", $one_combo, $combo_totals{$one_combo});
+}
 
 if ($exact_count > 0)   # If any combo matched the target price
 {
