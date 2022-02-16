@@ -49,8 +49,8 @@ for (my $lc = 1; $lc <= $item_count; $lc++)
       $combo_total += $item_price{$combo_item};
     }
     my $combo_join = join("|", @combo); # Use as key in hash %combo_total
-    $combo_totals{$combo_join} = $combo_total  # Total value of this combo
-      unless ($combo_total > $target_price);   # but skip if exceeded price
+    $combo_totals{$combo_join} = $combo_total; # Total value of this combo
+    # unless ($combo_total > $target_price);   # but skip if exceeded price
     if ($combo_total == $target_price)         # This is really my goal: 
     {                                          # a combo that matches target
       $exact_match{$combo_join} = $combo_total; # Tell world what it is
